@@ -1,5 +1,7 @@
 from rest_framework import viewsets
-from .models import *
+from .models import Time
 from .serializers import TimeSerializer
-# Create your views here.
-class TimeViewSet
+
+class TimeViewSet(viewsets.ModelViewSet):
+    queryset = Time.objects.all()
+    serializer_class = TimeSerializer
